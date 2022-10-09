@@ -26,13 +26,14 @@ else {
 
 let c = 1;
 if (c == 0){
-    console.log(a = 1);
+    c = 1
+    console.log(c + 1);
 }
 if (c < 0){
     console.log('less than zero');
 }
 if (c > 0){
-    console.log(a * 10);
+    console.log(c * 10);
 }
 
 
@@ -75,7 +76,7 @@ if (num1 == num2) {
 let num11 = prompt('Выберите число');
 let num22 = prompt('Выберите второе число');
 if (num11 % num22 == 0){
-    console.log(false);
+    console.log('false');
 }
  else{
     console.log(num1 % num2);
@@ -177,7 +178,7 @@ for (i = 0; i < 8; i + 2){
 
 // Вывести в консоль квадраты чисел от 0 до 100 (не включая 100) - т.е. вывести числа 0, 1, 4, 9, 16...
 // * Задавать количество чисел, которые нужно вывести, при помощи функции prompt.
-
+let f = 1;
 for (i = 0; i < 8; i++){
     console.log(f ** 2);
 }

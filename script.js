@@ -46,7 +46,8 @@ if (c > 0){
 
 
 let number = prompt('Введите число: ');
-let resultNumber = number < 5 ? 0 : 1;
+let number1 = Number(number);
+let resultNumber = number1 < 5 ? 0 : 1;
 console.log(resultNumber);
 
 
@@ -57,14 +58,16 @@ console.log(resultNumber);
 
 
 let num1 = prompt("Пожалуйста выберите первое число?");
+let num11 = Number(num1);
 let num2 = prompt("Пожалуйста выберите второе число?");
-if (num1 > num2) {
-  alert("Большее число - " + num1);
+let num22 = Number(num2);
+if (num11 > num22) {
+  alert("Большее число - " + num11);
 }
-if (num2 > num1) {
-  alert("Большее число - " + num2);
+if (num22 > num11) {
+  alert("Большее число - " + num22);
 }
-if (num1 == num2) {
+if (num11 == num22) {
   alert("ОШИБКА, ВЫ ВЫБРАЛИ ОДИНАКОВЫЕ ЧИСЛА!");
 }
 
@@ -73,13 +76,15 @@ if (num1 == num2) {
 // Определить, является ли введенное пользователем число num1 кратным введенному числу num2. Обе переменные запрашиваем у пользователя, ответ выводим в консоль.
 
 
-let num11 = prompt('Выберите число');
-let num22 = prompt('Выберите второе число');
-if (num11 % num22 == 0){
+let num12 = prompt('Выберите число');
+let num121 = Number(num12);
+let num21 = prompt('Выберите второе число');
+let num212 = Number(num21);
+if (num121 % num212 == 0){
     console.log('false');
 }
  else{
-    console.log(num1 % num2);
+    console.log(num121 % num212);
 } 
 
 
@@ -173,7 +178,7 @@ for (let i = 0; i < 10; i++){
 for (i = 0; i < 8; i = i + 2){
     e = prompt('Введите число');
     e1 = Number(e);
-    eResult = == 10 ? 'Равно 10' : 'Не равно 10';
+    eResult = e1 == 10 ? 'Равно 10' : 'Не равно 10';
     console.log(eResult);
 }
 
@@ -184,6 +189,7 @@ for (i = 0; i < 8; i = i + 2){
 // * Задавать количество чисел, которые нужно вывести, при помощи функции prompt.
 let f = 1;
 for (i = 0; i < 8; i++){
+    f = f + 1;
     console.log(f ** 2);
 }
 

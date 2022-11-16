@@ -7,7 +7,7 @@ let n = 2;
 if (n > 0 && n < 100) {
   alert("true");
 }
-if (n >= 0 || n <= 100) {
+else if(n >= 0 || n <= 100) {
   alert("true");
 }
 
@@ -21,13 +21,14 @@ if (n >= 0 || n <= 100) {
 // Вывести в консоль через шаблонные строки заработную плату всех работников в таком формате:
 // Заработная плата ххх составляет ххх рублей.
 
-let userProperty = 'Den', userProperty2 = 'Matt', userProperty3 = 'Steve';
-const engineers = {
-  Den: 1000,
-  Matt: 5000,
-  Steve: 2000,
+let engineers = {
+    Den: 1000,
+    Matt: 5000,
+    Steve: 2000
 };
-console.log(`Заработная плата ${userProperty} составляет ${engineers['Den']} рублей `)
+for (let property in engineers){
+    console.log(`Заработная плата ${property} составляет ${engineers[property]} рублей`);
+}
 
 // Задание 3
 // Создать массив из 5 элементов.

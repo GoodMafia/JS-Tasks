@@ -9,14 +9,12 @@
 // sum(); // введите два параметра
 
 let sum = function(a, b){
-    if (a / 1 > 0 && b / 1 > 0){
-    return a + b;
-    } else if (typeof a != 'number' || typeof b != 'number'){
+    if (a = undefined || b = undefined){
+        return 'Введите 2 параметра';
+    else if (typeof a != 'number' || typeof b != 'number'){
         return 'Введенные данные не являются числами';
     }
-    else {
-        return 'Введите два параметра';
-    }
+return a + b;
 }
 
 // Задание 2
@@ -35,9 +33,11 @@ let sum = function(a, b){
 // ПОСЛЕ: Uncaught Error: Функция "square" не может быть вызвана без аргумента
 
 function square(a){
-    if (typeof a != 'number'){
+    if (a = undefined){
        console.error(`Uncaught Error: Функция "square" не может быть вызвана без аргумента`);
-    } else {console.log(a * a);}
+    } else {
+    console.log(a * a);
+    }
 }
 
 square(4);

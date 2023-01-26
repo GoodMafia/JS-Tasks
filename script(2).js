@@ -25,5 +25,5 @@ Math.floor(5.6)
 // 19 часов 20 минут (здесь будет ваше время)
 
 let date = new Date();
-console.log(date.toLocalDateString());
-console.log(date.toLocalTimeString());
+console.log(`Сегодня ${date.toLocalDateString()}`);
+console.log(`Сейчас ${date.toLocalTimeString()}`);

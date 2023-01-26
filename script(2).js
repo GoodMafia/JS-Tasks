@@ -24,9 +24,6 @@ Math.floor(5.6)
 // Сегодня 27.10.2022 (здесь будет ваша дата)
 // 19 часов 20 минут (здесь будет ваше время)
 
-let date = new Date().toLocaleDateString();
-let time = new Date().toLocaleTimeString();
-let date1 = `Сегодня ${date}`;
-let time1 = `Сегодня ${time}`;
-console.log(date1);
-console.log(time1);
+let date = new Date();
+console.log(date.toLocalDateString());
+console.log(date.toLocalTimeString());

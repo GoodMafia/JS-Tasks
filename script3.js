@@ -37,10 +37,8 @@ console.log(list)
 // Задание 4 
 // Создать с помощью js абзац (тег p). Добавить в него контент. Добавить к нему стили: размер 36px, жирный шрифт. Добавить абзац с текстом на страницу. 
 let p = document.createElement('p');
+p.style.font = "36px, 900";
 document.body.appendChild(p);
-p.style["font"] = "36px, 900";
-
-
 
 // Задание 5
 // Написать в html тег заголовка с текстом "Сегодня:" 
@@ -49,19 +47,19 @@ p.style["font"] = "36px, 900";
 let h1 = document.createElement('h1');
 h1.innerText = 'Сегодня:';
 let p1 = document.createElement('p')
+p1.innerText = new Date().toLocaleDateString();
 document.body.appendChild(h1);
 document.body.appendChild(p1);
-p1.innerText = new Date().toLocaleDateString();
 
 // Задание 6
 // Написать функцию, которая принимает на вход 3 параметра: название тега, название цвета, содержимое. Функция должна сформировать необходимый тег, добавить необходимый стиль с цветом и внести содержимое. Вывести несколько таких сгенерированных тегов в консоль, затем отправить их на страницу.
 
 function DOM (tagName, tagColor, tagContent){
-    let name = tagName;
     let tag = document.createElement(name);
+    tag.style.color = tagColor;
+    tag.innerText = tagContent;
     document.body.appendChild(tag);
-    document.body.tagName.style["color"] = tagColor;
-    document.body.tagName.innerText = tagContent;
+
 }
 
 
@@ -151,9 +149,10 @@ document.body.appendChild(div);
 // ПОДСКАЗКА Для удаления DOM-элементов можно использовать метод element.remove().
 // ВАЖНО: Вам нужно удалять не всю коллекцию li, а каждый отдльный li
 
-let li = document.querySelector('.forRemove');
-li.remove();
-
+let li = document.querySelectorAll('.forRemove');
+li.forEach((item) => {
+    item.remove();
+} 
 
 
 // Задание 11
@@ -198,7 +197,7 @@ for (let i = 0; i < users.length; i++){
 // 3) На все ссылки в примере установить класс “custom-link”
 
 const ul = document.querySelector('ul');
-ul.className = 'list';
+ul.classListAdd('list')
 const li1 = document.querySelector('li');
 li1.forEach((item) => {
     li1.className = 'item';
